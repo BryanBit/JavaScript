@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criança Esperança</title>
+</head>
+<style>
+    body {
+        background-color: pink;
+        font: normal 16pt Arial;
+    }
+    h1 {
+        color: rgb(132, 14, 164);
+    }
+</style>
+<body>
+    <h1>Criança Esperança</h1>
+    <div id="telaint">
+        <p>Escolha um valor para doar:</p>
+        <p id="1"><strong> Opção 1 -</strong> R$10,00</p>
+        <p id="2"><strong> Opção 2 -</strong> R$25,00</p>
+        <p id="3"><strong> Opção 3 -</strong> R$50,00</p>
+        <p id="4"><strong> Opção 4 -</strong> Desejo doar outros valores <br></p>
+        <p><br>Informe a opção desejada: </p>
+        <input type="number" name="opcao" id="opcao">
+        <input type="button" value="Confirmar opção" onclick="gerardoacao()">
+    </div>
+    <div id="res">
+
+    </div>
+</body>
+<script>
+    function gerardoacao() {
+        var valor = document.getElementById ('opcao')
+        var result = document.getElementById ('res')
+        var tela = document.getElementById ('telaint')
+        var valortrue = Number (valor.value)
+        switch(valortrue) {
+            case 1: 
+                tela.innerHTML = ''
+                result.innerHTML = 'Obrigado! Você contribuiu na ação com R$10,00' 
+                break
+            case 2: 
+                tela.innerHTML = ''
+                result.innerHTML = 'Obrigado! Você contribuiu na ação com R$25,00'
+                break
+            case 3:
+                tela.innerHTML = ''
+                result.innerHTML = 'Obrigado! Você contribuiu na ação com R$50,00'
+                break
+            case 4: 
+                tela.innerHTML =`<p> Digite o valor que deseja doar: </p> 
+                <input type="number" name="opcao" id="opcao4">
+                <input type="button" value="Confirmar doação" onclick="doacaoxuxa()">`
+                break
+            default:
+                alert ('Verifique se você digitou o valor correto e tente novamente.')
+        }
+    }
+    function doacaoxuxa() {
+        var tela = document.getElementById('telaint');
+        var result = document.getElementById('res');
+        var doacaoq = document.getElementById('opcao4');
+        var valord4 = Number(doacaoq.value);
+        tela.innerHTML = '';
+        result.innerHTML = `Muito obrigado! Você contribuiu na ação com R$${valord4}`;
+        }
+</script>
+</html>

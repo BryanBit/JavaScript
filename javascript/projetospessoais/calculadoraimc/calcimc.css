@@ -1,0 +1,22 @@
+body {
+    background-color: rgb(192, 239, 230);
+}
+h1 {
+    color: rgb(63, 82, 189);
+    font: normal 25pt Arial;
+}
+h2 {
+    font: normal 15pt Arial;
+    color: rgb(12, 83, 15);
+}
+h3 {
+    font: normal 19pt Arial;
+    text-align: center;
+}
+p {
+    text-align: center;
+}
+input#butao {
+    display: flex;
+    margin: auto;
+}

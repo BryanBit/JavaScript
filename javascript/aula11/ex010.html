@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+</head>
+<style>
+    body {
+        background-color: gray;
+        font: normal 14pt Arial;
+    }
+    p {
+        color: rgb(106, 3, 3);;
+    }
+    h1 {
+        color: rgb(101, 66, 3);
+    }
+    
+</style>
+<body>
+    <h1>Departamento de Trânsito</h1>
+    <p>Qual a velocidade da via? <input type="number" name="velvia" id="velvia"> KM/H</p>
+    <p>Qual era sua velocidade? <input type="number" name="velmot" id="velmot"> KM/H</p>
+    <input type="button" value="Verificar" onclick="MultaSera()">
+    <p id="mult">Resultado</p>
+    <script>
+        function MultaSera (){
+        var velvia = document.getElementById ('velvia')
+        var velmot = document.getElementById ('velmot')
+        var vv = Number (velvia.value)
+        var vm = Number (velmot.value)
+        var mult = document.getElementById ('mult')
+        if (vm > vv) {
+            mult.innerHTML = `<p>Você excedeu a velocidade da via. <strong>MULTADO!</strong></p>`
+        } else {
+            mult.innerHTML = '<p>Você está dentro da velocidade ideal. <strong>NÂO MULTADO!</strong></p>'
+        }
+    }
+    </script>
+</body>
+</html>

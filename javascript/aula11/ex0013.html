@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justiça Eleitoral</title>
+</head>
+<style>
+    input#iddp {
+        width: 90px;
+    }
+</style>
+<body>
+    <h1> Justiça Eleitoral - RS</h1>
+    <p>Declado que possuo <input type="number" name="iddp" id="iddp"> anos:
+    <input type="button" value="Verificar" onclick="Verif()"></p>
+    <div id="Result"> </div>
+    <script>
+        function Verif() {
+            var iddp = document.getElementById ('iddp')
+            var result = document.getElementById ('Result')
+            var idade = (iddp.value)
+            if (idade < 16) {
+                result.innerHTML = 'Você ainda não tem a idade suficiente para votar.'
+            } else if (idade <= 16) {
+                result.innerHTML = 'Você pode votar, mas não é obrigatório.'
+            } else if (idade >= 18) {
+                result.innerHTML = 'Você pode votar, e seu voto é obrigatório.'
+            }
+        }
+    </script>
+</body>
+</html>
